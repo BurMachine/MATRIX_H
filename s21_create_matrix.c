@@ -9,7 +9,7 @@ void printner(matrix_t matrix) {
 
     for (int i = 0; i < a; i++) {
         for (int j = 0; j < b; j++) {
-            printf("%f ", matrix.matrix[i][j]);
+            printf("%.8lf ", matrix.matrix[i][j]);
         }
         printf("\n");
     }
