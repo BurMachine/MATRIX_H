@@ -11,6 +11,13 @@
 
 #define EPS 1e-8
 
+#include <errno.h>
+#include <math.h>
+#include <stdbool.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdnoreturn.h>
+
 typedef struct matrix_struct {
     double** matrix;
     int rows;
@@ -28,7 +35,11 @@ int s21_sum_matrix(matrix_t *A, matrix_t *B, matrix_t *result);
 int s21_mult_number(matrix_t *A, double number, matrix_t *result);
 int s21_mult_matrix(matrix_t *A, matrix_t *B, matrix_t *result);
 int s21_transpose(matrix_t *A, matrix_t *result);
+double determinant_rec(double **mat, int dim);
+int s21_calc_complements(matrix_t *A, matrix_t *result);
+int s21_determinant(matrix_t *A, double *result);
+int s21_inverse_matrix(matrix_t *A, matrix_t *result);
 
-
+noreturn void error(void);
 
 #endif // _S21_MATRIX_
