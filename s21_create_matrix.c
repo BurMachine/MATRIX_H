@@ -30,7 +30,7 @@ int s21_create_matrix(int rows, int columns, matrix_t *result) {
                 if (!result->matrix[i]) break;
             }
             code = OK;
-        }
-        return code;
+        }   
     }
+    return code;
 }

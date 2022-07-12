@@ -6,7 +6,7 @@
 int s21_inverse_matrix(matrix_t *A, matrix_t *result) {
     int code = OK;
     double det = 0.0;
-    if (!A || A->matrix < 1 || A->columns < 1) {
+    if (!A || A->rows < 1 || A->columns < 1) {
         code = INCORRECT_MATRIX;
     } else if(A->rows != A->columns) {
         code = CALC_ERROR;

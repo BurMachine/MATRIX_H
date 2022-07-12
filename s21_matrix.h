@@ -7,9 +7,13 @@
 #define MALLOC_ERROR 3
 
 #define FAIL 0
-#define SUCCESS 1
+// #define SUCCESS 1
 
 #define EPS 1e-8
+enum {
+    FAILURE = 0,
+    SUCCESS = 1
+};
 
 #include <errno.h>
 #include <math.h>

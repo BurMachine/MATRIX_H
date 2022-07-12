@@ -13,10 +13,11 @@ int s21_mult_number(matrix_t *A, double number, matrix_t *result) {
             }
         }
     }
+    return code;
 }
 int s21_mult_matrix(matrix_t *A, matrix_t *B, matrix_t *result) {
     int code = OK;
-    if (check_for_add_sub(*A, *B) != OK) code = INCORRECT_MATRIX;
+    // if (check_for_add_sub(*A, *B) != OK) code = INCORRECT_MATRIX;
 
     if (A->columns != B->rows) code = CALC_ERROR;
 
