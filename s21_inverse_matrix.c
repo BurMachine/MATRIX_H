@@ -23,11 +23,7 @@ int s21_inverse_matrix(matrix_t *A, matrix_t *result) {
         s21_create_matrix(A->rows, A->columns, &tmp);
         s21_create_matrix(A->columns, A->rows, &tmp1);
         s21_calc_complements(A, &tmp);
-        printner(tmp);
-        printf("\n\n");
         s21_transpose(&tmp, &tmp1);
-        printner(tmp1);
-        printf("\n\n");
         for (int i = 0; i < A->rows; i++) {
             for (int j = 0; j < A->rows;j++) {
                 result->matrix[i][j] = tmp1.matrix[i][j] / det;
