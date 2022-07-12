@@ -1,0 +1,451 @@
+make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+# GNU Make 3.81
+# Copyright (C) 2006  Free Software Foundation, Inc.
+# This is free software; see the source for copying conditions.
+# There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A
+# PARTICULAR PURPOSE.
+
+# This program built for i386-apple-darwin11.3.0
+ 
+
+# Make data base, printed on Tue Jul 12 17:14:04 2022
+
+# Variables
+
+# automatic
+<D = $(patsubst %/,%,$(dir $<))
+# automatic
+?F = $(notdir $?)
+# makefile (from `Makefile', line 7)
+OBJ = s21_matrix.o
+# makefile (from `Makefile', line 6)
+SRC = s21_matrix.c
+# environment
+VSCODE_LOG_NATIVE = false
+# makefile (from `Makefile', line 10)
+TARGET = /
+# automatic
+?D = $(patsubst %/,%,$(dir $?))
+# automatic
+@D = $(patsubst %/,%,$(dir $@))
+# automatic
+@F = $(notdir $@)
+# makefile
+CURDIR := /Users/gryffind/PROJECTS/github/MATRIX_H
+# makefile
+SHELL = /bin/sh
+# environment
+VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
+# environment
+_ = /usr/bin/make
+ 
+# makefile (from `Makefile', line 2)
+CFLAGS = -std=c11 -Wall -Werror -Wextra
+# makefile (from `Makefile', line 1)
+MAKEFILE_LIST :=  Makefile
+# makefile (from `Makefile', line 5)
+CHECKFLAGS = $(shell pkg-config --libs check) 
+# environment
+VSCODE_VERBOSE_LOGGING = true
+# environment
+__CFBundleIdentifier = com.microsoft.VSCode
+# environment
+VSCODE_IPC_HOOK_EXTHOST = /var/folders/zz/zyxvpxvq6csfxvn_n003vslh00yycw/T/vscode-ipc-1df48b09-7633-437d-b482-dffdb6b81401.sock
+# environment
+VSCODE_CWD = /
+# environment
+PATH = /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/usr/local/munki:/Library/Apple/usr/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands
+# environment
+LSCOLORS = Gxfxcxdxbxegedabagacad
+# environment
+LIBRARY_PATH = /usr/local/Cellar/check/0.15.2/lib:/usr/local/lib
+# environment
+VSCODE_LOG_STACK = false
+# environment
+ELECTRON_RUN_AS_NODE = 1
+# makefile (from `Makefile', line 8)
+LIB = s21_matrix.a
+# default
+.FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
+# environment
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.nvspYVaHzk/Listeners
+# environment
+CPLUS_INCLUDE_PATH = /usr/local/include/
+# automatic
+%F = $(notdir $%)
+# environment
+VSCODE_PIPE_LOGGING = true
+# environment
+PWD = /Users/gryffind/PROJECTS/github/MATRIX_H
+# environment
+ORIGINAL_XDG_CURRENT_DESKTOP = undefined
+# environment
+VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
+# environment
+HOME = /Users/gryffind
+# default
+MAKEFILEPATH := /Applications/Xcode.app/Contents/Developer/Makefiles
+# environment
+VSCODE_CODE_CACHE_PATH = /Users/gryffind/Library/Application Support/Code/CachedData/da15b6fd3ef856477bf6f4fb29ba1b7af717770d
+# environment
+LOGNAME = gryffind
+# environment
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+# environment
+ZSH = /Users/gryffind/.oh-my-zsh
+# makefile (from `Makefile', line 9)
+OBJ_TARG = test_matrix
+# environment
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# automatic
+^D = $(patsubst %/,%,$(dir $^))
+# environment
+XPC_FLAGS = 0x0
+# default
+MAKE = $(MAKE_COMMAND)
+# default
+MAKECMDGOALS := all
+# environment
+SHLVL = 1
+# makefile (from `Makefile', line 1)
+CC = gcc
+# default
+MAKE_VERSION := 3.81
+# environment
+USER = gryffind
+# makefile
+.DEFAULT_GOAL := help
+# environment
+LESS = -R
+# automatic
+%D = $(patsubst %/,%,$(dir $%))
+# makefile (from `Makefile', line 4)
+LFLAGS = --coverage
+# default
+MAKE_COMMAND := /Applications/Xcode.app/Contents/Developer/usr/bin/make
+# default
+.VARIABLES := 
+# environment
+TMPDIR = /var/folders/zz/zyxvpxvq6csfxvn_n003vslh00yycw/T/
+# automatic
+*F = $(notdir $*)
+# environment
+VSCODE_IPC_HOOK = /Users/gryffind/Library/Application Support/Code/1.67.1-main.sock
+# makefile
+MAKEFLAGS = Rrqp
+# environment
+MFLAGS = -Rrqp
+# automatic
+*D = $(patsubst %/,%,$(dir $*))
+# environment
+XPC_SERVICE_NAME = application.com.microsoft.VSCode.1623986.1624195
+# automatic
++D = $(patsubst %/,%,$(dir $+))
+# automatic
++F = $(notdir $+)
+# makefile (from `Makefile', line 3)
+GCOVFLAGS = -fprofile-arcs -ftest-coverage
+# environment
+__CF_USER_TEXT_ENCODING = 0xF799C:0x0:0x0
+# environment
+COMMAND_MODE = unix2003
+# default
+MAKEFILES := 
+# automatic
+<F = $(notdir $<)
+# environment
+PAGER = less
+# environment
+LC_ALL = C
+# automatic
+^F = $(notdir $^)
+# default
+SUFFIXES := 
+# environment
+C_INCLUDE_PATH = /usr/local/include/
+# default
+.INCLUDE_DIRS = /usr/local/include
+# environment
+MAKELEVEL := 0
+# environment
+LANG = C
+# environment
+VSCODE_PID = 92732
+# variable set hash-table stats:
+# Load=79/1024=8%, Rehash=0, Collisions=3/108=3%
+
+# Pattern-specific Variable Values
+
+# No pattern-specific variable values.
+
+# Directories
+
+ 
+# . (device 16777230, inode 944591): 30 files, no impossibilities.
+
+# 30 files, no impossibilities in 1 directories.
+
+# Implicit Rules
+
+# No implicit rules.
+
+# Files
+
+# Not a target:
+s21_calc_complements.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-12 15:29:33
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+s21_mult.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-12 16:36:29
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+gcov_report: clean gcov_lib gcov_test
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 57):
+	./s21_test_matrix
+	lcov -t "s21_test_matrix" -o s21_test_matrix.info -c -d .
+	genhtml -o report s21_test_matrix.info
+	
+
+all: build
+#  Phony target (prerequisite of .PHONY).
+#  Command-line target.
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/4=0%
+
+.PHONY: help all clean test s21_matrix.a gcov_report
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+s21_transpon.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-12 11:41:43
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+s21_matrix.a: determinant.c s21_calc_complements.c s21_create_matrix.c s21_eq_matrix.c s21_inverse_matrix.c s21_mult.c s21_remove_matrix.c s21_sum_sub.c s21_transpon.c s21_matrix.h
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  Implicit/static pattern stem: `'
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# automatic
+# @ := s21_matrix.a
+# automatic
+# % := 
+# automatic
+# * := 
+# automatic
+ 
+# + := determinant.c s21_calc_complements.c s21_create_matrix.c s21_eq_matrix.c s21_inverse_matrix.c s21_mult.c s21_remove_matrix.c s21_sum_sub.c s21_transpon.c s21_matrix.h
+# automatic
+# | := 
+# automatic
+# < := determinant.c
+# automatic
+# ^ := determinant.c s21_calc_complements.c s21_create_matrix.c s21_eq_matrix.c s21_inverse_matrix.c s21_mult.c s21_remove_matrix.c s21_sum_sub.c s21_transpon.c s21_matrix.h
+# automatic
+# ? := determinant.c s21_calc_complements.c s21_create_matrix.c s21_eq_matrix.c s21_inverse_matrix.c s21_mult.c s21_remove_matrix.c s21_sum_sub.c s21_transpon.c s21_matrix.h
+# variable set hash-table stats:
+# Load=8/32=25%, Rehash=0, Collisions=1/12=8%
+#  commands to execute (from `Makefile', line 40):
+	$(CC) $(CFLAGS) -c *.c
+	ar -rc libs21_matrix.a *.o
+	ranlib libs21_matrix.a
+	cp libs21_matrix.a s21_matrix.a
+	
+
+gcov_lib: determinant.c s21_calc_complements.c s21_create_matrix.c s21_eq_matrix.c s21_inverse_matrix.c s21_mult.c s21_remove_matrix.c s21_sum_sub.c s21_transpon.c s21_matrix.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 46):
+	$(CC) $(CFLAGS) $(GCOVFLAGS) $(LFLAGS) -c *.c
+	ar -rc libs21_matrix.a *.o
+	ranlib libs21_matrix.a
+	
+
+# Not a target:
+.SUFFIXES:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+Makefile:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-12 17:01:31
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+rebuild: clean build
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+test: clean s21_test_matrix.o s21_matrix.a
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 34):
+	$(CC) $(CFLAGS) -o test/s21_test_matrix test/s21_test_matrix.o -L. -ls21_matrix $(CHECKFLAGS)
+	valgrind --log-file="log.txt" --tool=memcheck --track-origins=yes --leak-check=yes ./test/s21_test_matrix
+	./test/s21_test_matrix
+	
+
+build: s21_matrix.a
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/4=0%
+
+# Not a target:
+s21_inverse_matrix.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-12 15:29:46
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+s21_create_matrix.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-12 15:26:42
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+help:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 15):
+	@echo "Available targets:"
+	@echo "  make test"
+	@echo "  make s21_matrix.a"
+	@echo "  make gcov_report"
+	
+
+gcov_test: gcov_lib
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 52):
+	$(CC) $(CFLAGS) $(GCOVFLAGS) -c test/s21_test_matrix.c -o test/s21_test_matrix.o
+	$(CC) $(CFLAGS) $(GCOVFLAGS) $(LFLAGS) test/s21_test_matrix.o -L./ -ls21_matrix $(CHECKFLAGS) -o s21_test_matrix
+	
+
+# Not a target:
+s21_matrix.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-12 16:06:14
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+.DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+s21_eq_matrix.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-12 11:41:43
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+determinant.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-12 11:41:43
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+clean:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 23):
+	rm -rf s21_matrix_test test/s21_test_matrix s21_test_matrix test/*.gcda test/*.o test/*.gcno *.gch *.gcda *.gcno *.a *.o *.json coverage.* *.info ./report/ ./s21_matrix_test.dSYM/
+	
+
+s21_test_matrix.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 31):
+	$(CC) $(CFLAGS) -c test/s21_test_matrix.c -o test/s21_test_matrix.o
+	
+
+# Not a target:
+s21_sum_sub.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-12 16:22:15
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+s21_remove_matrix.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-12 11:41:43
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# files hash-table stats:
+# Load=25/1024=2%, Rehash=0, Collisions=3/76=4%
+# VPATH Search Paths
+
+# No `vpath' search paths.
+
+# No general (`VPATH' variable) search path.
+
+# # of strings in strcache: 1
+# # of strcache buffers: 1
+# strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
+# strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
+
+# Finished Make data base on Tue Jul 12 17:14:04 2022
+
+ 

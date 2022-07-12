@@ -1,0 +1,9 @@
+make --dry-run --keep-going --print-directory
+make: Entering directory `/Users/gryffind/PROJECTS/github/MATRIX_H'
+echo "Available targets:"
+echo "  make test"
+echo "  make s21_matrix.a"
+ 
+echo "  make gcov_report"
+make: Leaving directory `/Users/gryffind/PROJECTS/github/MATRIX_H'
+ 

@@ -1,8 +1,9 @@
 CC=gcc
-CFLAGS= -std=c11 -Wall -Werror -Wextra
+CFLAGS= -std=c11 -Wall -Werror -Wextra -g
 GCOVFLAGS=-fprofile-arcs -ftest-coverage
 LFLAGS= --coverage
 CHECKFLAGS=$(shell pkg-config --libs check) #-lcheck -lm -lpthread -lrt -lsubunit
+DEBUGFLG= -g -fsanitize=leak
 SRC=s21_matrix.c
 OBJ=s21_matrix.o
 LIB=s21_matrix.a
@@ -28,16 +29,16 @@ build: $(LIB)
 rebuild: clean build
 
 s21_test_matrix.o: 
-	$(CC) $(CFLAGS) -c test/s21_test_matrix.c -o test/s21_test_matrix.o
+	$(CC) $(CFLAGS) -c -g test/s21_test_matrix.c -o test/s21_test_matrix.o
 
 test: clean s21_test_matrix.o s21_matrix.a 
-	$(CC) $(CFLAGS) -o test/s21_test_matrix test/s21_test_matrix.o -L. -ls21_matrix $(CHECKFLAGS)
+	$(CC) $(CFLAGS) -g -o test/s21_test_matrix test/s21_test_matrix.o -L. -ls21_matrix $(CHECKFLAGS)
 #	leaks -atExit -- ./test/s21_test_matrix
-	valgrind  --tool=memcheck --track-origins=yes --leak-check=yes ./test/s21_test_matrix 
+	valgrind  --tool=memcheck --track-origins=yes --leak-check=yes ./test/s21_test_matrix #--log-file="log.txt"
 	./test/s21_test_matrix
 
 s21_matrix.a: *.c s21_matrix.h
-	$(CC) $(CFLAGS) -c *.c
+	$(CC) $(CFLAGS) -c -g *.c
 	ar -rc libs21_matrix.a *.o
 	ranlib libs21_matrix.a
 	cp libs21_matrix.a s21_matrix.a

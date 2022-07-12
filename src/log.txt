@@ -1,0 +1,124 @@
+==17322== Memcheck, a memory error detector
+==17322== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==17322== Using Valgrind-3.19.0.GIT-lbmacos and LibVEX; rerun with -h for copyright info
+==17322== Command: ./test/s21_test_matrix
+==17322== Parent PID: 17259
+==17322== 
+==17322== Warning: set address range perms: large range [0x7fff20663000, 0x800020463000) (defined)
+==17322== Warning: set address range perms: large range [0x7fff209b9000, 0x7fff7ffff000) (defined)
+==17322== Warning: set address range perms: large range [0x7fff8e8c7000, 0x7fffc0663000) (noaccess)
+==17322== Warning: set address range perms: large range [0x7fffc0663000, 0x7fffe3527000) (defined)
+==17322== Warning: set address range perms: large range [0x7fffe3527000, 0x7fffffe00000) (noaccess)
+==17324== 
+==17324== HEAP SUMMARY:
+==17324==     in use at exit: 0 bytes in 0 blocks
+==17324==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
+==17324== 
+==17324== All heap blocks were freed -- no leaks are possible
+==17324== 
+==17324== For lists of detected and suppressed errors, rerun with: -s
+==17324== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==17325== 
+==17325== HEAP SUMMARY:
+==17325==     in use at exit: 0 bytes in 0 blocks
+==17325==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
+==17325== 
+==17325== All heap blocks were freed -- no leaks are possible
+==17325== 
+==17325== For lists of detected and suppressed errors, rerun with: -s
+==17325== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==17327== 
+==17327== HEAP SUMMARY:
+==17327==     in use at exit: 0 bytes in 0 blocks
+==17327==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
+==17327== 
+==17327== All heap blocks were freed -- no leaks are possible
+==17327== 
+==17327== For lists of detected and suppressed errors, rerun with: -s
+==17327== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==17328== 
+==17328== HEAP SUMMARY:
+==17328==     in use at exit: 0 bytes in 0 blocks
+==17328==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
+==17328== 
+==17328== All heap blocks were freed -- no leaks are possible
+==17328== 
+==17328== For lists of detected and suppressed errors, rerun with: -s
+==17328== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==17329== 
+==17329== HEAP SUMMARY:
+==17329==     in use at exit: 0 bytes in 0 blocks
+==17329==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
+==17329== 
+==17329== All heap blocks were freed -- no leaks are possible
+==17329== 
+==17329== For lists of detected and suppressed errors, rerun with: -s
+==17329== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==17330== 
+==17330== HEAP SUMMARY:
+==17330==     in use at exit: 0 bytes in 0 blocks
+==17330==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
+==17330== 
+==17330== All heap blocks were freed -- no leaks are possible
+==17330== 
+==17330== For lists of detected and suppressed errors, rerun with: -s
+==17330== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==17331== 
+==17331== HEAP SUMMARY:
+==17331==     in use at exit: 0 bytes in 0 blocks
+==17331==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
+==17331== 
+==17331== All heap blocks were freed -- no leaks are possible
+==17331== 
+==17331== For lists of detected and suppressed errors, rerun with: -s
+==17331== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==17332== Conditional jump or move depends on uninitialised value(s)
+==17332==    at 0x7FFF209B48DF: ??? (in /dev/ttys002)
+==17332==    by 0x7FFF20882184: ??? (in /dev/ttys002)
+==17332==    by 0x7FFF2088AE2B: ??? (in /dev/ttys002)
+==17332==    by 0x7FFF208AF964: ??? (in /dev/ttys002)
+==17332==    by 0x7FFF20887FE5: ??? (in /dev/ttys002)
+==17332==    by 0x7FFF20886155: ??? (in /dev/ttys002)
+==17332==    by 0x100002E50: s21_inverse_matrix (in ./test/s21_test_matrix)
+==17332==    by 0x100002001: inverse_hardcoded_fn (in ./test/s21_test_matrix)
+==17332==    by 0x10014A6C6: srunner_run_tagged (in /usr/local/lib/libcheck.0.dylib)
+==17332==    by 0x100002406: main (in ./test/s21_test_matrix)
+==17332==  Uninitialised value was created by a stack allocation
+==17332==    at 0x7FFF208880CF: ??? (in /dev/ttys002)
+==17332== 
+==17332== 
+==17332== HEAP SUMMARY:
+==17332==     in use at exit: 0 bytes in 0 blocks
+==17332==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
+==17332== 
+==17332== All heap blocks were freed -- no leaks are possible
+==17332== 
+==17332== For lists of detected and suppressed errors, rerun with: -s
+==17332== ERROR SUMMARY: 4 errors from 1 contexts (suppressed: 0 from 0)
+==17333== 
+==17333== HEAP SUMMARY:
+==17333==     in use at exit: 0 bytes in 0 blocks
+==17333==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
+==17333== 
+==17333== All heap blocks were freed -- no leaks are possible
+==17333== 
+==17333== For lists of detected and suppressed errors, rerun with: -s
+==17333== ERROR SUMMARY: 4 errors from 1 contexts (suppressed: 0 from 0)
+==17334== 
+==17334== HEAP SUMMARY:
+==17334==     in use at exit: 0 bytes in 0 blocks
+==17334==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
+==17334== 
+==17334== All heap blocks were freed -- no leaks are possible
+==17334== 
+==17334== For lists of detected and suppressed errors, rerun with: -s
+==17334== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==17322== 
+==17322== HEAP SUMMARY:
+==17322==     in use at exit: 0 bytes in 0 blocks
+==17322==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
+==17322== 
+==17322== All heap blocks were freed -- no leaks are possible
+==17322== 
+==17322== For lists of detected and suppressed errors, rerun with: -s
+==17322== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)

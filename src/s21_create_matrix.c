@@ -3,17 +3,17 @@
 #include <stdlib.h>
 
 
-void printner(matrix_t matrix) {
-    int a = matrix.rows;
-    int b = matrix.columns;
+// void printner(matrix_t matrix) {
+//     int a = matrix.rows;
+//     int b = matrix.columns;
 
-    for (int i = 0; i < a; i++) {
-        for (int j = 0; j < b; j++) {
-            printf("%.8lf ", matrix.matrix[i][j]);
-        }
-        printf("\n");
-    }
-}
+//     for (int i = 0; i < a; i++) {
+//         for (int j = 0; j < b; j++) {
+//             printf("%.8lf ", matrix.matrix[i][j]);
+//         }
+//         printf("\n");
+//     }
+// }
 
 int s21_create_matrix(int rows, int columns, matrix_t *result) {
     int code = INCORRECT_MATRIX;

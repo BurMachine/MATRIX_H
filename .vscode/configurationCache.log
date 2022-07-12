@@ -1,0 +1,1 @@
+{"buildTargets":["all","build","clean","gcov_lib","gcov_report","gcov_test","help","rebuild","s21_matrix.a","s21_matrix_test.o","s21_test_matrix.o","test"],"launchTargets":[],"customConfigurationProvider":{"workspaceBrowse":{"browsePath":[],"compilerArgs":[]},"fileIndex":[]}}

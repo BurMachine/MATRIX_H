@@ -4,12 +4,11 @@
 
 #include "s21_matrix.h"
 #include <stdlib.h>
-void s21_remove_matrix(matrix_t *A) {
-    if (A->matrix) {
-        for (int i = 0; i < A->rows; i++) {
+void s21_remove_matrix(matrix_t *const A) {
+    if (A) {
+        for (int i = 0; i < A->rows; i++)
             free(A->matrix[i]);
-        }
+
         free(A->matrix);
     }
 }
-

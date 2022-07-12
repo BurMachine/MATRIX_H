@@ -4,7 +4,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <sys/types.h>
 #include <time.h>
 #include <unistd.h>
 
@@ -13,6 +12,7 @@ START_TEST(create_matrix) {
     matrix_t A = {0};
     code = s21_create_matrix(1, 1 , &A);
     ck_assert_int_eq(code, OK);
+    s21_remove_matrix(&A);
 }
 END_TEST
 
@@ -51,7 +51,7 @@ START_TEST(mult_num) {
     int num = 2;
     matrix_t res = {0};
     s21_create_matrix(cols, rows, &res);
-    ck_assert_int_eq(s21_mult_number(&m,num, &res), OK);
+    ck_assert_int_eq(s21_mult_number(&m, num, &res), OK);
     ck_assert_int_eq(s21_eq_matrix(&check, &res), SUCCESS);
     s21_remove_matrix(&m);
     s21_remove_matrix(&res);
@@ -160,12 +160,6 @@ START_TEST(complements_hardcoded) {
     s21_create_matrix(size, size, &res);
     s21_calc_complements(&m, &res);
 
-    for (int i = 0; i < res.rows; i++) {
-        for (int j = 0; j < res.columns; j++) {
-            printf("%lf ", res.matrix[i][j]);
-        }
-        printf("\n");
-    }
 
     ck_assert_int_eq(s21_eq_matrix(&expected, &res), SUCCESS);
     s21_remove_matrix(&m);
@@ -212,56 +206,40 @@ END_TEST START_TEST(determinant_no_zeros) {
 }
 END_TEST
 
-START_TEST(inverse_hardcoded) {
-    const int size = 3;
-    matrix_t m = {0};
-    s21_create_matrix(size, size, &m);
-    m.matrix[0][0] = 2;
-    m.matrix[0][1] = 5;
-    m.matrix[0][2] = 7;
-    m.matrix[1][0] = 6;
-    m.matrix[1][1] = 3;
-    m.matrix[1][2] = 4;
-    m.matrix[2][0] = 5;
-    m.matrix[2][1] = -2;
-    m.matrix[2][2] = -3;
-    matrix_t res = {0};
-    s21_create_matrix(size, size, &res);
-    s21_inverse_matrix(&m, &res);
-    matrix_t expected = {0};
-    s21_create_matrix(size, size, &expected);
-    expected.matrix[0][0] = 1;
-    expected.matrix[0][1] = -1;
-    expected.matrix[0][2] = 1;
-    expected.matrix[1][0] = -38;
-    expected.matrix[1][1] = 41;
-    expected.matrix[1][2] = -34;
-    expected.matrix[2][0] = 27;
-    expected.matrix[2][1] = -29;
-    expected.matrix[2][2] = 24;
-    ck_assert_int_eq(s21_eq_matrix(&expected, &res), SUCCESS);
-    s21_remove_matrix(&expected);
-    s21_remove_matrix(&res);
-    s21_remove_matrix(&m);
-    if (errno)
-        errno = OK;
-    pid_t pid = fork();
-    perror("CURRENT ERRNO");
-    if (errno == 0) {
-        if (pid == 0)
-            error();
-        else
-            fprintf(stderr, "\tExplanation of what just happened. In order to boost \n\
-        code coverage & somehow test halt function I forked process and called \n\
-        halt function in child. Child died with error message, and parent prints this message\n");
-    } else {
-        fprintf(stderr,
-                "We are in such a bad state, that this program couldn't even \n\
-        fork one process. This is really sad.\n");
-        error();
-    }
-}
-END_TEST
+// START_TEST(inverse_hardcoded) {
+//     const int size = 3;
+//     matrix_t m = {0};
+//     s21_create_matrix(size, size, &m);
+//     m.matrix[0][0] = 2;
+//     m.matrix[0][1] = 5;
+//     m.matrix[0][2] = 7;
+//     m.matrix[1][0] = 6;
+//     m.matrix[1][1] = 3;
+//     m.matrix[1][2] = 4;
+//     m.matrix[2][0] = 5;
+//     m.matrix[2][1] = -2;
+//     m.matrix[2][2] = -3;
+//     matrix_t res = {0};
+//     s21_create_matrix(size, size, &res);
+//     s21_inverse_matrix(&m, &res);
+//     matrix_t expected = {0};
+//     s21_create_matrix(size, size, &expected);
+//     expected.matrix[0][0] = 1;
+//     expected.matrix[0][1] = -1;
+//     expected.matrix[0][2] = 1;
+//     expected.matrix[1][0] = -38;
+//     expected.matrix[1][1] = 41;
+//     expected.matrix[1][2] = -34;
+//     expected.matrix[2][0] = 27;
+//     expected.matrix[2][1] = -29;
+//     expected.matrix[2][2] = 24;
+//     ck_assert_int_eq(s21_eq_matrix(&expected, &res), SUCCESS);
+//     s21_remove_matrix(&expected);
+//     s21_remove_matrix(&res);
+//     s21_remove_matrix(&m);
+
+// }
+// END_TEST
 
 int main() {
     Suite *s1 = suite_create("Core");
@@ -277,7 +255,7 @@ int main() {
     tcase_add_test(tc_1, complements_hardcoded);
     tcase_add_test(tc_1, determinant_hardcoded);
     tcase_add_test(tc_1, determinant_no_zeros);
-    tcase_add_test(tc_1, inverse_hardcoded);
+    // tcase_add_test(tc_1, inverse_hardcoded);
     tcase_add_test(tc_1, mult_num);
     // tcase_add_test(tc_1, inverse_hardcoded);
     // tcase_add_test(tc_1, inverse_hardcoded);
