@@ -5,7 +5,7 @@
 
 int s21_determinant(matrix_t *A, double *result) {
     int code = OK;
-    if (A == NULL || A->columns < 1 || A->rows < 1) {
+    if (!A || A->columns < 1 || A->rows < 1) {
         code = INCORRECT_MATRIX;
     } else if (A->rows != A->columns) {
         code = CALC_ERROR;

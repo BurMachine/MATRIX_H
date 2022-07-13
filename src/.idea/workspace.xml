@@ -9,9 +9,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c74dee75-6699-4c25-b631-1f5aa42d4b01" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/determinant.c" beforeDir="false" afterPath="$PROJECT_DIR$/determinant.c" afterDir="false" />
-    </list>
+    <list default="true" id="c74dee75-6699-4c25-b631-1f5aa42d4b01" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -68,7 +66,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1657704503119</updated>
-      <workItem from="1657704507937" duration="5151000" />
+      <workItem from="1657704507937" duration="5650000" />
     </task>
     <servers />
   </component>
