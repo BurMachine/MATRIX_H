@@ -1,5 +1,5 @@
-#ifndef _S21_MATRIX_
-#define _S21_MATRIX_
+#ifndef SRC_S21_MATRIX_H_
+#define SRC_S21_MATRIX_H_
 
 #define OK 0
 #define INCORRECT_MATRIX 1
@@ -46,4 +46,4 @@ int s21_inverse_matrix(matrix_t *A, matrix_t *result);
 
 noreturn void error(void);
 
-#endif // _S21_MATRIX_
+#endif  //  SRC_S21_MATRIX_H_

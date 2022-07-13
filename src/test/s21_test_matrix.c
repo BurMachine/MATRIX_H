@@ -86,9 +86,7 @@ END_TEST
 
 START_TEST(mult_hardcode) {
     const int rows = 3;
-    // const int rows = rand() % 100 + 1;
     const int cols = 3;
-    // const int cols = rand() % 100 + 1;
     matrix_t m = {0};
     s21_create_matrix(rows, cols, &m);
     matrix_t mtx = {0};
@@ -98,14 +96,10 @@ START_TEST(mult_hardcode) {
     for (int i = 0; i < rows; i++)
         for (int j = 0; j < cols; j++)
             m.matrix[i][j] = md++;
-
-    // m.matrix[i][j] = get_rand(-10e10, 10e10);
     int k1 = 1;
     for (int i = 0; i < cols; i++)
         for (int j = 0; j < rows; j++)
             mtx.matrix[i][j] = k1++;
-    // mtx.matrix[i][j] = get_rand(-10e10, 10e10);
-
     matrix_t check = {0};
     s21_create_matrix(m.rows, mtx.columns, &check);
 
@@ -187,7 +181,8 @@ START_TEST(determinant_hardcoded) {
     ck_assert_int_eq(got, OK);
     s21_remove_matrix(&m1);
 }
-END_TEST START_TEST(determinant_no_zeros) {
+END_TEST
+START_TEST(determinant_no_zeros) {
     const int rows = 5;
     const int cols = 5;
     matrix_t m1 = {0};
@@ -205,41 +200,39 @@ END_TEST START_TEST(determinant_no_zeros) {
     s21_remove_matrix(&m1);
 }
 END_TEST
-
-// START_TEST(inverse_hardcoded) {
-//     const int size = 3;
-//     matrix_t m = {0};
-//     s21_create_matrix(size, size, &m);
-//     m.matrix[0][0] = 2;
-//     m.matrix[0][1] = 5;
-//     m.matrix[0][2] = 7;
-//     m.matrix[1][0] = 6;
-//     m.matrix[1][1] = 3;
-//     m.matrix[1][2] = 4;
-//     m.matrix[2][0] = 5;
-//     m.matrix[2][1] = -2;
-//     m.matrix[2][2] = -3;
-//     matrix_t res = {0};
-//     s21_create_matrix(size, size, &res);
-//     s21_inverse_matrix(&m, &res);
-//     matrix_t expected = {0};
-//     s21_create_matrix(size, size, &expected);
-//     expected.matrix[0][0] = 1;
-//     expected.matrix[0][1] = -1;
-//     expected.matrix[0][2] = 1;
-//     expected.matrix[1][0] = -38;
-//     expected.matrix[1][1] = 41;
-//     expected.matrix[1][2] = -34;
-//     expected.matrix[2][0] = 27;
-//     expected.matrix[2][1] = -29;
-//     expected.matrix[2][2] = 24;
-//     ck_assert_int_eq(s21_eq_matrix(&expected, &res), SUCCESS);
-//     s21_remove_matrix(&expected);
-//     s21_remove_matrix(&res);
-//     s21_remove_matrix(&m);
-
-// }
-// END_TEST
+START_TEST(inverse_hardcoded) {
+     const int size = 3;
+     matrix_t m = {0};
+     s21_create_matrix(size, size, &m);
+     m.matrix[0][0] = 2;
+     m.matrix[0][1] = 5;
+     m.matrix[0][2] = 7;
+     m.matrix[1][0] = 6;
+     m.matrix[1][1] = 3;
+     m.matrix[1][2] = 4;
+     m.matrix[2][0] = 5;
+     m.matrix[2][1] = -2;
+     m.matrix[2][2] = -3;
+     matrix_t res = {0};
+     s21_create_matrix(size, size, &res);
+     s21_inverse_matrix(&m, &res);
+     matrix_t expected = {0};
+     s21_create_matrix(size, size, &expected);
+     expected.matrix[0][0] = 1;
+     expected.matrix[0][1] = -1;
+     expected.matrix[0][2] = 1;
+     expected.matrix[1][0] = -38;
+     expected.matrix[1][1] = 41;
+     expected.matrix[1][2] = -34;
+     expected.matrix[2][0] = 27;
+     expected.matrix[2][1] = -29;
+     expected.matrix[2][2] = 24;
+     ck_assert_int_eq(s21_eq_matrix(&expected, &res), SUCCESS);
+     s21_remove_matrix(&expected);
+     s21_remove_matrix(&res);
+     s21_remove_matrix(&m);
+}
+END_TEST
 
 int main() {
     Suite *s1 = suite_create("Core");
@@ -255,7 +248,7 @@ int main() {
     tcase_add_test(tc_1, complements_hardcoded);
     tcase_add_test(tc_1, determinant_hardcoded);
     tcase_add_test(tc_1, determinant_no_zeros);
-    // tcase_add_test(tc_1, inverse_hardcoded);
+     tcase_add_test(tc_1, inverse_hardcoded);
     tcase_add_test(tc_1, mult_num);
     // tcase_add_test(tc_1, inverse_hardcoded);
     // tcase_add_test(tc_1, inverse_hardcoded);

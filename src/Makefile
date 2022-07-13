@@ -34,7 +34,7 @@ s21_test_matrix.o:
 test: clean s21_test_matrix.o s21_matrix.a 
 	$(CC) $(CFLAGS) -g -o test/s21_test_matrix test/s21_test_matrix.o -L. -ls21_matrix $(CHECKFLAGS)
 #	leaks -atExit -- ./test/s21_test_matrix
-	valgrind  --tool=memcheck --track-origins=yes --leak-check=yes ./test/s21_test_matrix #--log-file="log.txt"
+	valgrind --tool=memcheck --track-origins=yes --leak-check=yes  ./test/s21_test_matrix #--log-file="log.txt"
 	./test/s21_test_matrix
 
 s21_matrix.a: *.c s21_matrix.h

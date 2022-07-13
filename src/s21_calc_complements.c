@@ -11,10 +11,8 @@ int s21_calc_complements(matrix_t *A, matrix_t *result) {
 
     if (!A || A->rows < 1 || A->columns < 1) {
         code = INCORRECT_MATRIX;
-    } else if(A->rows != A->columns) {
+    } else if (A->rows != A->columns) {
         code = CALC_ERROR;
-    } else {
-        code = s21_create_matrix(A->rows, A->columns, result);
     }
 
     if (code == OK) less_dim(A, result);

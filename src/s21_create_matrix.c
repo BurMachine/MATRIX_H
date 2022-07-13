@@ -21,7 +21,7 @@ int s21_create_matrix(int rows, int columns, matrix_t *result) {
     if (rows > 0 && columns > 0) {
         result->columns = columns;
         result->rows = rows;
-        result->matrix = calloc(rows, sizeof (double *));
+        result->matrix = (double**)calloc(rows, sizeof (double *));
         code = MALLOC_ERROR;
 
         if (result->matrix) {
@@ -30,7 +30,7 @@ int s21_create_matrix(int rows, int columns, matrix_t *result) {
                 if (!result->matrix[i]) break;
             }
             code = OK;
-        }   
+        }
     }
     return code;
 }

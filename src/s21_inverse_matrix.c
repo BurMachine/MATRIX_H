@@ -8,7 +8,7 @@ int s21_inverse_matrix(matrix_t *A, matrix_t *result) {
     double det = 0.0;
     if (!A || A->rows < 1 || A->columns < 1) {
         code = INCORRECT_MATRIX;
-    } else if(A->rows != A->columns) {
+    } else if (A->rows != A->columns) {
         code = CALC_ERROR;
     }
     if (code == OK) {
@@ -20,17 +20,15 @@ int s21_inverse_matrix(matrix_t *A, matrix_t *result) {
     matrix_t tmp;
     matrix_t tmp1;
     if (code == OK) {
-        
         s21_create_matrix(A->rows, A->columns, &tmp);
         s21_create_matrix(A->columns, A->rows, &tmp1);
         s21_calc_complements(A, &tmp);
         s21_transpose(&tmp, &tmp1);
         for (int i = 0; i < A->rows; i++) {
-            for (int j = 0; j < A->rows;j++) {
+            for (int j = 0; j < A->rows; j++) {
                 result->matrix[i][j] = tmp1.matrix[i][j] / det;
             }
         }
-        
     }
     s21_remove_matrix(&tmp);
     s21_remove_matrix(&tmp1);
