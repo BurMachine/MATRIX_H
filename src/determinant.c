@@ -12,8 +12,8 @@ int s21_determinant(matrix_t *A, double *result) {
     }
 
     if (code == OK && A->columns == 1) {
-        *result = A->matrix[0][0];
-    } else {
+            *result = A->matrix[0][0];
+    } else if (code == OK && A->columns > 1) {
         *result = determinant_rec(A->matrix, A->rows);
     }
     return code;
